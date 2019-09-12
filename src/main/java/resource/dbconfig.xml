@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="readdb" class="atmwithdb.ReadDB"></bean>
+    <bean id="readtxt" class="atmwithdb.ReadTxt">
+        <constructor-arg value="customers.txt">
+        </constructor-arg>
+    </bean>
+
+    <bean id="bank" class="atmwithdb.Bank">
+        <constructor-arg ref="readdb"/>
+    </bean>
+
+    <bean id="atm" class="atmwithdb.ATM">
+        <constructor-arg ref="bank"/>
+    </bean>
+
+    <bean id="atmsimulator" class="atmwithdb.ATMSimulator">
+        <constructor-arg ref="atm"/>
+    </bean>
+
+</beans>
