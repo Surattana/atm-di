@@ -3,7 +3,7 @@ package atmjavaconfig;
 import java.io.IOException;
 
 /**
- * An ATM that accesses a bank.
+ * An atmwitJDBC.ATM that accesses a bank.
  */
 public class ATM {
 	public static final int START = 1;
@@ -16,7 +16,7 @@ public class ATM {
 	private Bank bank;
 
 	/**
-     * Constructs an ATM for a bank.
+     * Constructs an atmwitJDBC.ATM for a bank.
 	 */
 	public ATM(Bank bank) {
 		this.bank = bank;
@@ -30,7 +30,7 @@ public class ATM {
 	}
 
 	/**
-     * Resets the ATM to the initial state.
+     * Resets the atmwitJDBC.ATM to the initial state.
 	 */
 	public void reset() {
 		customerNumber = -1;
@@ -102,7 +102,7 @@ public class ATM {
 	}
 
 	/**
-     * Gets the current state of this ATM.
+     * Gets the current state of this atmwitJDBC.ATM.
      * @return the current state
 	 */
 	public int getState() {

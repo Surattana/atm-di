@@ -1,10 +1,11 @@
-package atmwithdb;
+package atmwitJDBC;
 
 import java.io.IOException;
 
 /**
  * An atmwitJDBC.ATM that accesses a bank.
  */
+
 public class ATM {
 	public static final int START = 1;
 	public static final int TRANSACT = 2;
@@ -18,6 +19,7 @@ public class ATM {
 	/**
      * Constructs an atmwitJDBC.ATM for a bank.
 	 */
+
 	public ATM(Bank bank) {
 		this.bank = bank;
 		this.customerNumber = -1;
